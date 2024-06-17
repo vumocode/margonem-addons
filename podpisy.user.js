@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.5
+// @version      1.0
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
