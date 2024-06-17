@@ -120,6 +120,7 @@
         /* Dendroculus */ "3597": "DENDR",
         /* Tolypeutes */ "5657": "TOLY",
         /* Cuaitl Citlalin */ "5672": "CIUT",
+        /* Pogardliwa Sybilla */ "4056": "SYBA",
         /* Pogardliwa Sybilla */ "4057": "SYBA",
         /* Yaotl */ "5695": "JAJO",
         /* Quetzalcoatl */ "5685": "P9",
