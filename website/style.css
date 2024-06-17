@@ -1,0 +1,135 @@
+*{
+    background-color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+
+#p1{
+    color: red;
+    font-size: 80%;
+}
+
+#p2{
+    color: aqua;
+    font-size: 80%;
+}
+
+#p3{
+    color: yellow;
+    font-size: 80%;
+}
+
+#a1{
+    color: red;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
+}
+
+#a1:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+}
+
+
+#a2{
+    color: aqua;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
+}
+
+#a2:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+}
+
+#a3{
+    color: yellow;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
+}
+
+#a3:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+}
+
+#kod1{
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 1px red solid;
+    box-shadow: 0px 0px 20px red;
+    color: red;
+    width: 32%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0.5%;
+
+}
+
+
+#kod2{
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 1px solid aqua;
+    box-shadow: 0px 0px 20px aqua;
+    width: 32%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0.5%;
+    
+}
+
+#kod3{
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 1px yellow solid;
+    box-shadow: 0px 0px 20px yellow;
+    width: 32%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0.5%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text{
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff, #ff007f, #ff0000);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s infinite linear;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+button{
+color: white;
+border: rgb(0, 0, 0) 1px solid;
+}
+
+#buttons{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#play, #pause{
+    width: 20px;
+    height: auto;
+    margin: 2px;
+    display: flex;
+}
