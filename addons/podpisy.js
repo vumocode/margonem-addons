@@ -116,6 +116,7 @@
         /* Mocny Maddoks */ "1481": "MDKS",
         /* Arachniregina Colosseus */ "1142": "P5",
         /* Pancerny Maddok*/ "1463": "PANC",
+        /* Silvanus */ "3627": "SILVA",
         /* Silvanus */ "3628": "SILVA",
         /* Dendroculus */ "3597": "DENDR",
         /* Tolypeutes */ "5657": "TOLY",
