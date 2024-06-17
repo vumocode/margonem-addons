@@ -1,9 +1,8 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @namespace    http://tampermonkey.net/
 // @version      1.5
 // @description  Podpisy KCS'ów
-// @author       You
+// @author       vumo
 // @match        https://*.margonem.pl/
 // @downloadURL  https://vumocode.github.io/margonem-addons/addons/podpisy.js
 // @updateURL    https://vumocode.github.io/margonem-addons/addons/podpisy.js
