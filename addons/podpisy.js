@@ -1,3 +1,16 @@
+// ==UserScript==
+// @name         Podpisy KCS
+// @version      1.02
+// @description  Podpisy KCS'ów
+// @author       vumo
+// @match        https://*.margonem.pl/
+// @downloadURL  https://vumocode.github.io/margonem-addons/addons/podpisy.js
+// @updateURL    https://vumocode.github.io/margonem-addons/addons/podpisy.js
+// @require      https://vumocode.github.io/margonem-addons/addons/podpisy.js
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=margonem.pl
+// @grant        none
+// ==/UserScript==
+
 !function() {
     const config = {
 
@@ -64,6 +77,7 @@
         /* Choukker */ "6636": "CHOUK",
         /* Nadzorczyni krasnoludów */ "6772": "NADZ",
         /* Morthen */ "6773": "MORTH",
+        /* Leśne Widmo */ "1324": "WIDMO",
         /* Leśne Widmo */ "1325": "WIDMO",
         /* Żelazoręki Ohydziarz */ "3466": "OHYD",
         /* Goplana */ "1150": "GOPA",
