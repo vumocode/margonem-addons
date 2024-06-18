@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.05
+// @version      1.06
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -88,8 +88,9 @@
         /* Jertek Moxos */ "6937": "JERT",
         /* Miłośnik Rycerzy */ "6944": "MR",
         /* Miłośnik Magii */ "6946": "MM",
-        /* Miłośnik Łowców */ "7066": "P4",
-        /* Łowca Czaszek */ "6945": "MŁ",
+        /* Miłośnik Łowców */ "6945": "MŁ",
+        /* Łowca Czaszek */ "7065": "P4",
+        /* Łowca Czaszek */ "7066": "P4",
         /* Ozirus Władca Hieroglifów */ "7069": "OZI",
         /* Wójt Fistuła */ "2761": "WOJT",
         /* Krab pustelnik */ "4271": "KRAB",
