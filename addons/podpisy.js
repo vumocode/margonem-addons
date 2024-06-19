@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.06
+// @version      1.08
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -13,14 +13,8 @@
 
 !function() {
     const config = {
-
-        /// INNE ///
-        
         /* Kuźnia Kendala */ "1224": "KEND",
         /* Port Tuzmer */ "630": "PORT",
-
-        /// TYTANI ///
-
         /* Dziewicza Orlica */ "189": "ORLA",
         /* Zabójczy Królik */ "1746": "KIC",
         /* Renegat Baulus */ "6949": "RENE",
@@ -33,9 +27,6 @@
         /* Tezcatlipoca */ "5709": "TEZA",
         /* Barbatos Smoczy Strażnik */ "3312": "BB",
         /* Tanroth */ "2355": "TH",
-
-        /// KOLOSI ///
-
         /* Mamlambo */ "3361": "LAMB",
         /* Regulus Mętnooki */ "3883": "REGU",
         /* Umibozu */ "2149": "UMI",
@@ -45,10 +36,7 @@
         /* Lulukav */ "4196": "LUKAV",
         /* Arachin Podstępny */ "4206": "ARACH",
         /* Reuzen */ "4266": "REUZ",
-        /* Wernoradzki Drakolisz */ "4268": "DRAKO",
-
-        /// E2 ///
-
+        /* Wernoradzki Drakolisz */ "4268": "DRAK",
         /* Mushita */ "1060": "MUSH",
         /* Kotołak Tropiciel */ "632": "KOTO",
         /* Shae Phu */ "5738": "SHAE",
@@ -98,6 +86,7 @@
         /* Królowa Śniegu */ "1238": "KRÓL",
         /* Teściowa Rumcajsa */ "1101": "TEŚĆ",
         /* Ifryt */ "7057": "IFRYT",
+        /* Piraci */ "1525": "PIRACI",
         /* Młody Jack Truciciel */ "3409": "JACK",
         /* Helga Opiekunka Rumu */ "1527": "HELGA",
         /* Henry Kaprawe Oko */ "1526": "HENRY",
@@ -105,7 +94,7 @@
         /* Burkog Lorulk */ "5855": "BUREK",
         /* Sheba Orcza Szamanka */ "5851": "SHEBA",
         /* Grubber Ochlaj */ "6955": "GRUB",
-        /* Berserker Amuno */ "3265": "AMUNO",
+        /* Berserker Amuno */ "3265": "AMUN",
         /* Stworzyciel */ "3255": "STW",
         /* Fodug Zolash */ "716": "FODUG",
         /* Mistrz Worundriel */ "1276": "WOREK",
@@ -172,48 +161,41 @@
         div.style.marginTop = "-2px";
         div.style.zIndex = 1000;
         div.style.fontWeight = "650";
-    
+        div.style.letterSpacing = "0.5px";
+
         div.style.textShadow = `
-            -1px -1px 2px rgba(0,0,0,0.75),  
+            -1px -1px 2px rgba(0,0,0,0.75),
              1px -1px 2px rgba(0,0,0,0.75),
             -1px  1px 2px rgba(0,0,0,0.75),
              1px  1px 2px rgba(0,0,0,0.75),
-            -2px -2px 4px rgba(0,0,0,0.75),  
+            -2px -2px 4px rgba(0,0,0,0.75),
              2px -2px 4px rgba(0,0,0,0.75),
             -2px  2px 4px rgba(0,0,0,0.75),
              2px  2px 4px rgba(0,0,0,0.75)
         `;
-    
+
         return div;
     }
-    
-    
-    
+
+    function removeCustomDiv(id) {
+        const overlay = document.querySelector(`#overlay-${id}`);
+        if (overlay) {
+            overlay.remove();
+        }
+    }
 
     async function appendItemOverlay(id, text) {
         let overlay = document.querySelector(`#overlay-${id}`);
-        if (!overlay) {
-            if (NI) {
-                const $it = document.querySelector(`.item-id-${id}`);
-                if ($it) {
-                    overlay = createCustomDiv(id, text);
-                    const $canv = $it.querySelector("canvas");
-                    $canv.parentElement.appendChild(overlay);
-                    overlay.id = `overlay-${id}`;
-                }
-            } else {
-                g.loadQueue.push({
-                    fun: async () => {
-                        const $it = document.querySelector(`#item${id}`);
-                        if ($it) {
-                            overlay = createCustomDiv(id, text);
-                            const $img = $it.querySelector("img");
-                            $img.parentElement.appendChild(overlay);
-                            overlay.id = `overlay-${id}`;
-                        }
-                    }
-                });
-            }
+        const $it = NI ? document.querySelector(`.item-id-${id}`) : document.querySelector(`#item${id}`);
+        const $parent = $it ? $it.closest(".depo") : null;
+
+        if (!overlay && $it && !$parent) {
+            overlay = createCustomDiv(id, text);
+            const $canv = NI ? $it.querySelector("canvas") : $it.querySelector("img");
+            $canv.parentElement.appendChild(overlay);
+            overlay.id = `overlay-${id}`;
+        } else if ($parent) {
+            removeCustomDiv(id);
         }
     }
 
@@ -243,6 +225,34 @@
         } else {
             window.parseInput = override;
         }
+
+        const observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.type === "attributes" && mutation.attributeName === "class") {
+                    const target = mutation.target;
+                    const idMatch = target.className.match(/item-id-(\d+)/);
+                    if (idMatch) {
+                        const id = idMatch[1];
+                        const overlay = document.querySelector(`#overlay-${id}`);
+                        if (target.classList.contains("depo")) {
+                            if (overlay) {
+                                overlay.remove();
+                            }
+                        } else {
+                            const tp = getItemTp({stat: target.getAttribute("data-stats")});
+                            const tpMap = getTpMap(tp);
+                            const entry = config[tp] ?? config[tpMap];
+                            if (entry && !overlay) {
+                                appendItemOverlay(id, entry);
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+        const container = NI ? document.querySelector(".items-container") : document.body;
+        observer.observe(container, { attributes: true, subtree: true });
     }
 
     function parseStats(stats) {
