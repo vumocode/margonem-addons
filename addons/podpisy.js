@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.09
+// @version      1.10
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -13,8 +13,14 @@
 
 !function() {
     const config = {
+        
+        /* INNE */
+
         /* Kuźnia Kendala */ "1224": "KEND",
         /* Port Tuzmer */ "630": "PORT",
+
+        /* TYTANI */
+
         /* Dziewicza Orlica */ "189": "ORLA",
         /* Zabójczy Królik */ "1746": "KIC",
         /* Renegat Baulus */ "6949": "RENE",
@@ -27,6 +33,9 @@
         /* Tezcatlipoca */ "5709": "TEZA",
         /* Barbatos Smoczy Strażnik */ "3312": "BB",
         /* Tanroth */ "2355": "TH",
+
+        /* KOLOSI */
+
         /* Mamlambo */ "3361": "LAMB",
         /* Regulus Mętnooki */ "3883": "REGU",
         /* Umibozu */ "2149": "UMI",
@@ -37,6 +46,9 @@
         /* Arachin Podstępny */ "4206": "ARACH",
         /* Reuzen */ "4266": "REUZ",
         /* Wernoradzki Drakolisz */ "4268": "DRAK",
+    
+        /* E2 */
+
         /* Mushita */ "1060": "MUSH",
         /* Kotołak Tropiciel */ "632": "KOTO",
         /* Shae Phu */ "5738": "SHAE",
