@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.08
+// @version      1.09
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -64,7 +64,6 @@
         /* Choukker */ "6634": "CHOUK",
         /* Choukker */ "6636": "CHOUK",
         /* Nadzorczyni krasnoludów */ "6772": "NADZ",
-        /* Morthen */ "6773": "MORTH",
         /* Leśne Widmo */ "1324": "WIDMO",
         /* Leśne Widmo */ "1325": "WIDMO",
         /* Żelazoręki Ohydziarz */ "3466": "OHYD",
