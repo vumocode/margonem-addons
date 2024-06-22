@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Better Lootlog
-// @version      1.0
+// @version      1.01
 // @description  Customowy styl css dla Lootloga.
 // @author       You
 // @match        https://*.margonem.pl/
@@ -34,7 +34,7 @@ $(`<style>
    color: white !important;
    border: 1px solid red !important;
    border-radius: 5px !important;
-   box-shadow: 0px 0px 20px red;
+   box-shadow: 0px 0px 10px red;
    backdrop-filter: blur(5px);
 
 }
