@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.10
+// @version      1.11
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -150,8 +150,8 @@
         /* Pustynia */ "3339": "PUST",
         /* Nymphemonia */ "6064": "NYMF",
         /* Nymphemonia */ "6065": "NYMF",
-        /* Furion */ "2353": "FUR",
-        /* Artenius */ "2356": "ART",
+        /* Artenius */ "2353": "ART",
+        /* Furion */ "2356": "FUR",
         /* Zorin */ "2354": "ZOR",
     };
 
