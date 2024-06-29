@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.11
+// @version      1.12
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -140,6 +140,7 @@
         /* Cuaitl Citlalin */ "5672": "CIUT",
         /* Pogardliwa Sybilla */ "4056": "SYBA",
         /* Pogardliwa Sybilla */ "4057": "SYBA",
+        /* Yaotl */ "5694": "JAJO",
         /* Yaotl */ "5695": "JAJO",
         /* Quetzalcoatl */ "5685": "P9",
         /* Chopesz */ "3035": "CHOP",
@@ -154,6 +155,7 @@
         /* Furion */ "2356": "FUR",
         /* Zorin */ "2354": "ZOR",
     };
+
 
     const NI = typeof window.Engine !== "undefined";
 
