@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.12
+// @version      1.13
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -80,6 +80,7 @@
         /* Leśne Widmo */ "1325": "WIDMO",
         /* Żelazoręki Ohydziarz */ "3466": "OHYD",
         /* Goplana */ "1150": "GOPA",
+        /* Gnom Figlid */ "6780": "GNOM",
         /* Gnom Figlid */ "6781": "GNOM",
         /* Centaur Zyfryd */ "3765": "ZYF",
         /* Kambion */ "229": "KAMB",
