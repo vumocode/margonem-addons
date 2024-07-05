@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Better Tooltips
-// @version      1.01
+// @version      1.02
 // @description  Customowy styl css tooltipów.
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -21,23 +21,6 @@ $(`<style>
 
 .tip-wrapper[data-item-type=normal], .tip-wrapper[data-item-type=t-norm] {
     box-shadow: none !important;
-}
-
-.tip-wrapper {
-    box-shadow: none;
-}
-
-.tip-wrapper[data-type=t_other] {
-    max-width: 250px;
-    text-align: center;
-    min-width: 186px;
-    box-shadow: 0 0 #2b282a,0 0 0 1px #353131,0 0 0 2px #191311,0 0 0 3px #2b2727,0 0 0 4px #0f0f0f99,0 0 0 5px #0f0f0f,0 0 0 6px #5a585b,0 0 0 7px #2c2625;
-}
-
-.tip-wrapper[data-type=t_npc] {
-    text-align: center;
-    border-color: #5b7d00;
-    box-shadow: 0 0 #2b282a, 0 0 0 1px #353131, 0 0 0 2px #191311, 0 0 0 3px #2b2727, 0 0 0 4px #0f0f0f99, 0 0 0 5px #0f0f0f, 0 0 0 6px #5a585b, 0 0 0 7px #2c2625;
 }
 
 /* LEGENDARY */
