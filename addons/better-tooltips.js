@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Better Tooltips
-// @version      1.02
+// @version      1.03
 // @description  Customowy styl css tooltipów.
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -52,15 +52,23 @@ $(`<style>
 /* HEROIC */
 
 .tip-wrapper[data-item-type=heroic], .tip-wrapper[data-item-type=t-her] {
-    box-shadow: 0px 0px 20px 8px #015780;
-    border: 2px solid #037ab2;
+    box-shadow: 0px 0px 20px 8px #00263e;
+    border: 2px solid #007cca;
+}
+
+.tip-wrapper[data-type=t_item] .item-head .heroic, .tip-wrapper[data-type=t_item] .item-tip-section .heroic {
+    color: #007cca;
 }
 
 /* ELITE */
 
 .tip-wrapper[data-item-type=elite], .tip-wrapper[data-item-type=t-elite], .tip-wrapper[data-item-type=t-uniupg], .tip-wrapper[data-item-type=unique] {
-    box-shadow: 0px 0px 20px 8px #b7ad00;
-    border: 2px solid #fff100;
+    box-shadow: 0px 0px 20px 8px #ce9403;
+    border: 2px solid #ffb600;
+}
+
+.tip-wrapper[data-type=t_item] .item-head .unique, .tip-wrapper[data-type=t_item] .item-tip-section .unique {
+    color: #e7a602;
 }
  
 </style>`).appendTo('html');
