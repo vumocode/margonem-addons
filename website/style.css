@@ -2,8 +2,13 @@
     background-color:black;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
+    user-select: none;
 }
 
+#zestaw1, #zestaw2{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #p1{
     color: red;
@@ -20,32 +25,49 @@
     font-size: 80%;
 }
 
+#p4{
+    color: rgb(0, 255, 0);
+    font-size: 80%;
+}
+
+#p4m{
+    color: rgb(0, 255, 0);
+    font-size: 60%;
+    margin-top: -13px;
+}
+
+#p5{
+    color: rgb(255, 0, 217);
+    font-size: 80%;
+}
+
+#p6{
+    color: rgb(255, 145, 0);
+    font-size: 80%;
+}
+
 #a1{
     color: red;
-    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
 }
-
-#a1:hover{
-    font-size: 1.5em; /* Enlarged font size on hover */
-}
-
 
 #a2{
     color: aqua;
-    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
-}
-
-#a2:hover{
-    font-size: 1.5em; /* Enlarged font size on hover */
 }
 
 #a3{
     color: yellow;
-    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
 }
 
-#a3:hover{
-    font-size: 1.5em; /* Enlarged font size on hover */
+#a4{
+    color: rgb(0, 255, 0);
+}
+
+#a5{
+    color: rgb(255, 0, 217);
+}
+
+#a6{
+    color: rgb(255, 145, 0);
 }
 
 #kod1{
@@ -56,13 +78,17 @@
     box-shadow: 0px 0px 20px red;
     color: red;
     width: 32%;
-    float: left;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0.5%;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
 
 }
 
+#kod1:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+
+}
 
 #kod2{
     text-align: center;
@@ -71,11 +97,16 @@
     border: 1px solid aqua;
     box-shadow: 0px 0px 20px aqua;
     width: 32%;
-    float: left;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0.5%;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
     
+}
+
+#kod2:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+
 }
 
 #kod3{
@@ -85,10 +116,69 @@
     border: 1px yellow solid;
     box-shadow: 0px 0px 20px yellow;
     width: 32%;
-    float: left;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0.5%;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
+}
+
+#kod3:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+
+}
+
+#kod4{
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 1px rgb(0, 255, 0) solid;
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+    width: 32%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0.5%;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
+}
+
+#kod4:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+
+}
+
+#kod5{
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 1px rgb(255, 0, 217) solid;
+    box-shadow: 0px 0px 20px rgb(255, 0, 217);
+    width: 32%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0.5%;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
+}
+
+#kod5:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+
+}
+
+#kod6{
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 1px rgb(255, 145, 0) solid;
+    box-shadow: 0px 0px 20px rgb(255, 145, 0);
+    width: 32%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0.5%;
+    transition: font-size 0.5s ease-in-out; /* Transition for smooth enlargement */
+}
+
+#kod6:hover{
+    font-size: 1.5em; /* Enlarged font size on hover */
+
 }
 
 @keyframes gradient {
@@ -113,23 +203,4 @@
     font-weight: bold;
     font-size: 2em;
     text-align: center;
-}
-
-button{
-color: white;
-border: rgb(0, 0, 0) 1px solid;
-}
-
-#buttons{
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#play, #pause{
-    width: 20px;
-    height: auto;
-    margin: 2px;
-    display: flex;
 }
