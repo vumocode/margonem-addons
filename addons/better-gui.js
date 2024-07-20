@@ -1,5 +1,5 @@
 // @name         Better GUI
-// @version      1.01
+// @version      1.02
 // @description  Zmienia czerwone kolorki w GUI Margonem na ciemniejsze, bardziej pasujące do DarknessNI z paczki dodatków Maddonz
 // @author       vumo
 // @match        https://*.margonem.pl/
