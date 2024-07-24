@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Podpisy KCS
-// @version      1.14
+// @version      1.15
 // @description  Podpisy KCS'ów
 // @author       vumo
 // @match        https://*.margonem.pl/
@@ -30,6 +30,7 @@
         /* Łowczyni Wspomnień */ "6477": "ŁOWKA",
         /* Przyzywacz Demonów */ "6476": "PRZY",
         /* Maddok Magua */ "2024": "MAGU",
+        /* Tezcatlipoca */ "5708": "TEZA",
         /* Tezcatlipoca */ "5709": "TEZA",
         /* Barbatos Smoczy Strażnik */ "3312": "BB",
         /* Tanroth */ "2355": "TH",
